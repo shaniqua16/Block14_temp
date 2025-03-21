@@ -4,7 +4,7 @@
 // Prompt the user for a list of integers separated by commas.
 const userInputString = prompt(
   "Please enter some integers separated by commas.",
-  "1,2,3,4,5"
+  "11,12,3,4,5"
 );
 
 // Split the string of numbers into an array of strings.
@@ -32,60 +32,112 @@ console.log(`The odd numbers you gave are ${getOdds(numbers)}.`);
 // === EDIT THE CODE BELOW ===
 // Complete the functions below to make the program work!
 
-/**
+/** // TODO
  * @param {number[]} numbers an array of integers
  * @returns {number} the length of the array
  */
-function getLength(numbers) {
-  // TODO
-}
+function getLength(numbers) 
+{ 
+   let count= 0 
+for ( let i = 0; i < numbers.length; i++){ 
+  count ++
+ }
+  return count}
 
-/**
+
+
+/** // TODO
  * @param {number[]} numbers an array of integers
  * @returns {number} the sum of the numbers
  */
-function getSum(numbers) {
-  // TODO
+function getSum(numbers) 
+{
+  let NumSum = 0
+  
+  for (let i = 0; i < numbers.length; i++) {
+    NumSum += numbers[i]; 
+  } 
+console.log (getSum.numbers)
 }
 
-/**
+
+
+
+/** // TODO
  * @param {number[]} numbers an array of integers
  * @returns {number} the mean of the numbers
  */
 function getMean(numbers) {
-  // TODO
+  let mean =0
+  for(let i = 0; i < numbers.length; i++) {
+    mean += numbers [i] / numbers.length;
+  }
+  console.log(Math.floor(getMean.number))
 }
 
+
+
+// TODO
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the smallest of the numbers
- */
+*/
 function getMin(numbers) {
-  // TODO
+  let min = numbers [0]
+  for(let i = 1; i < numbers.length; i++){ 
+    if (numbers[i] < min){
+      min = numbers[i]
+    }
+  }
+  console.log(Math.min(getMin.number))
 }
+
+
+
 
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the largest of the numbers
  */
 function getMax(numbers) {
-  // TODO
-}
+ 
+  let max= -Infinity
+  for (let i= 0; i < numbers.length; i++){
+    if (numbers[i] > max) { max = numbers[i]}
+  }
+  }
+  
+  
 
-/**
+
+
+/** // TODO
  * @param {number[]} numbers an array of integers
  * @returns {number} the range of the numbers (max - min)
- */
-function getRange(numbers) {
-  // TODO
+ */ 
+
+
+
+function getRange(number) {
+  let range = []
+  for (let i = 0; i < number.length; i++){
+    range.push (i)
+  }
+ return range
 }
 
-/**
+
+
+
+
+
+/** // TODO
  * @param {number[]} numbers an array of integers
  * @returns {number[]} the even numbers in the array
  */
 function getEvens(numbers) {
-  // TODO
+  let even = numbers.filter (number => number % 2 === 0);
+  
 }
 
 /**
@@ -93,5 +145,8 @@ function getEvens(numbers) {
  * @returns {number[]} the odd numbers in the array
  */
 function getOdds(numbers) {
+
+  let odd = numbers.filter (number => number % 2 !== 0);
+  
   // TODO
 }
